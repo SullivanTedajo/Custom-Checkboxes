@@ -1,0 +1,66 @@
+@import url(global.css);
+
+
+.main-container{
+    padding-block: 7em;
+    margin: auto;
+    max-width: 50em;
+    width: 50%;
+}
+
+.main-container_title{
+    color: var(--blue-color);
+}
+.checkbox-container{
+    padding: 0;
+    margin: 0;
+}
+.checkbox-control{
+    margin-bottom: 0;
+    padding: 1.2em;
+}
+.checkbox-control_normal{
+    appearance: none;
+    font-size: .55em;
+    vertical-align: middle;
+    aspect-ratio: 1;
+    margin-right: 1em;
+    /* width: .1em;
+    height: .9em; */
+    background-color: white;
+    /* transform: scale(1.5); */
+    padding-right: 2em;
+    cursor: pointer;
+    border-radius: .3em;
+    
+
+    &:hover{
+        background-color: var(--active-color);
+    }
+    &:checked{
+        outline: .2em solid  var(--disabled-color);
+        accent-color: var(--active-color);
+        background-color: var(--active-color);
+
+    }
+    &::before{
+        border-radius: 0;
+        
+    }
+
+    &:disabled{
+        cursor: not-allowed;
+        background-color: var(--disabled-color);
+
+    }
+    &::after{
+        /* border-color: white;
+  border-style: solid;
+  border-width: 0 0.15em 0.15em 0;
+  box-sizing: border-box; */
+  content: '';
+  aspect-ratio: 1 / 1.8;
+  rotate: 40deg;
+  width: 0.375em;
+    }
+}
